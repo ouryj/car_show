@@ -1,0 +1,35 @@
+<% include ../partials/header %>
+
+<div class="ui text main container segment">
+        <h1>edit <%=car.carname%> </h1>
+
+        <form class="ui form" action="/cars/<%=car._id%>?_method=put" method="POST" >
+                <div class="field">
+                  <label>Car Name</label>
+                  <input type="text" name="car[carname]" value="<%=car.carname%>">
+                </div>
+                <div class="field">
+                  <label>Image</label>
+                  <input type="text" name="car[image]" value="<%=car.image%>" >
+                </div>
+                <div class="field">
+                    <label>Model</label>
+                     <input type="text" name="car[model]" value="<%=car.model%>">
+                </div>
+                <div class="field">
+                   <label>Make</label>
+                   <input type="text" name="car[make]" value="<%=car.carname%>">
+                 </div>
+                 <div class="field">
+                    <label>Year</label>
+                    <input type="date" name="car[year]" value="<%=car.year%>">
+                </div>
+               
+                <button class="ui blue button" type="submit">edit car</button>
+              </form>
+   
+</div>
+
+
+
+<% include ../partials/footer %>

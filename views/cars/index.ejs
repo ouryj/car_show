@@ -1,0 +1,24 @@
+<% include ../partials/header %>
+<div class="ui text main container segment">
+        <h1><a class="ui link" href="/cars/new">show your ride</a></h1>
+        <%if(cars && cars.length > 0){%>
+        <div class="ui segment">
+            <%cars.forEach(function(car){%>
+                <h3><%=car.carname%></h3>
+                <em>posted by - <strong><%=car.owner.username%></strong> on <%=car.posted.toDateString()%></em>
+                <img class="ui fluid image" src="<%=car.image%>" alt="">
+                
+                
+                
+                <a href="/cars/<%=car._id%>" class="ui blue button">More Info</a>
+           <% }) %>
+        </div>
+        <%}%>
+
+</div>
+
+
+
+
+
+<% include ../partials/footer %>

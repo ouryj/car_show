@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Car_Show</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+
+</head>
+<body>
+        <div class="ui inverted segment">
+                <div class="ui inverted secondary pointing menu">
+                  <a href="/" class="item">
+                    Home
+                  </a>
+                  <a href="/register" class="item">
+                    Sign up
+                  </a>
+                  <a href="/login" class="item active">
+                    login
+                  </a>
+                  <a href="/logout" class="item">logout</a>
+                  <a href="/cars" class="item">view show</a>
+                  <% if(currentUser) { %>
+                    <a href="#" class="item"><em>login as: <%=currentUser.username%></em></a>
+                    <%}%>
+                </div>
+
+              </div>
+             
+                <% if(error && error.length > 0) {%>
+                  <div class="ui text main container segment">
+                  <div class="ui error message">
+                   
+                   
+                    <p><%= error %></p>
+                  </div>
+                </div>
+                  <%} %>
+                  <%if(success && success.length > 0) {%>
+                    <div class="ui text main container segment">
+                      <div class="ui success message">
+                       
+                       
+                        <p><%= success %></p>
+                      </div>
+                    </div>
+                    <%}%>
+              
+    
+
+
+
